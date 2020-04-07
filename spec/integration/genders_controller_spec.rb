@@ -97,7 +97,7 @@ RSpec.describe V1::GenresController, type: :request do
       end
     end
 
-    context 'when there is genre to destroy' do
+    context 'when there is no genre to destroy' do
       it 'must return 204' do
         header = { Authorization: "Bearer #{@token}" }
         delete '/v1/genres/10000', headers: header

@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     get '/entry_point', to: 'entry_point#index'
 
     resources :genres
+    resources :users
   end
 end
