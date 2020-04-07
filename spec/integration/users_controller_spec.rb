@@ -52,7 +52,7 @@ RSpec.describe V1::GenresController, type: :request do
   end
 
   describe 'put# update' do
-    describe 'when update right' do
+    context 'when the user exists' do
       it 'must update user' do
         header = { Authorization: "Bearer #{@token}" }
         payload = {
@@ -64,6 +64,19 @@ RSpec.describe V1::GenresController, type: :request do
         @user.reload
         expect(@user.email).to eq('sample@sample.com.br')
         expect(response.status).to eq(200)
+      end
+    end
+
+    context 'whe the user does not exists' do
+      it 'must return not found' do
+        header = { Authorization: "Bearer #{@token}" }
+        payload = {
+            email: 'sample@sample.com.br',
+            password: '123456',
+            password_confirmation: '123456'
+        }
+        put '/v1/users/1000', params: payload, headers: header
+        expect(response.status).to eq(404)
       end
     end
 
