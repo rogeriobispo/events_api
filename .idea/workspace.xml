@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37482082-0ea4-4880-b33a-24eb8b0dc36a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/events_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/events_api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/channels/application_cable/connection_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/files/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/integration/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mailers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/v1/authentication_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/authentication_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/v1/entry_point_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/entry_point_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jobs/application_job.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/jobs/application_job.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/authenticate_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/authenticate_user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/authorize_api_request.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/authorize_api_request.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/json_web_token.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/json_web_token.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/integration/authentication_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/authentication_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +36,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -288,7 +286,7 @@
       <workItem from="1586205691314" duration="11000" />
       <workItem from="1586205726808" duration="7721000" />
       <workItem from="1586213999741" duration="135000" />
-      <workItem from="1586214138508" duration="2556000" />
+      <workItem from="1586214138508" duration="6674000" />
     </task>
     <servers />
   </component>
@@ -313,7 +311,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb</url>
-          <line>43</line>
+          <line>47</line>
           <properties a="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
