@@ -31,6 +31,9 @@ gem 'simple_command'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+# softt deleete
+gem "paranoia", "~> 2.2"
+
 group :development, :test do
   gem 'pry-byebug'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
