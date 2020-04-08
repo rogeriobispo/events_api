@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_08_000950) do
+ActiveRecord::Schema.define(version: 2020_04_08_191943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.integer "member_quantity"
+    t.bigint "genre_id", null: false
+    t.string "note"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_artists_on_deleted_at"
+    t.index ["genre_id"], name: "index_artists_on_genre_id"
+  end
 
   create_table "event_genres", force: :cascade do |t|
     t.bigint "genre_id", null: false
@@ -23,13 +35,14 @@ ActiveRecord::Schema.define(version: 2020_04_08_000950) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.integer "type"
+    t.string "type"
     t.date "occurred_on"
     t.string "location"
     t.date "line_up_date"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["type"], name: "index_events_on_type"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -39,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_04_08_000950) do
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_genres_on_deleted_at"
+    t.index ["name"], name: "index_genres_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,8 +63,10 @@ ActiveRecord::Schema.define(version: 2020_04_08_000950) do
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "artists", "genres"
   add_foreign_key "event_genres", "events"
   add_foreign_key "event_genres", "genres"
   add_foreign_key "events", "users"
