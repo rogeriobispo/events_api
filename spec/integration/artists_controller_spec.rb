@@ -19,6 +19,7 @@ RSpec.describe V1::ArtistsController, type: :request do
     })
 
     user_body = {
+        name: 'rogerio',
         email: 'rbispo@rbispo.com.br',
         password: '123456',
         password_confirmation: '123456'

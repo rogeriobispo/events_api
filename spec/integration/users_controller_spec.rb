@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe V1::GenresController, type: :request do
   before do
     @user_body = {
+      name: 'rbispo',
       email: 'rbispo@rbispo.com.br',
       password: '123456',
       password_confirmation: '123456'
@@ -19,9 +20,10 @@ RSpec.describe V1::GenresController, type: :request do
     context 'when the payload is right' do
       it 'must return 204' do
         user_body = {
-            email: 'sample@sample.com.br',
-            password: '123456',
-            password_confirmation: '123456'
+          name: 'sample',
+          email: 'sample@sample.com.br',
+          password: '123456',
+          password_confirmation: '123456'
         }
 
         header = { Authorization: "Bearer #{@token}" }

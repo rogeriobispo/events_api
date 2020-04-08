@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe V1::AuthenticationController, type: :request do
   before do
     user_body = {
+      name: 'rbispo',
       email: 'rbispo@rbispo.com.br',
       password: '123456',
       password_confirmation: '123456'
