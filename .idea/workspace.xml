@@ -2,30 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37482082-0ea4-4880-b33a-24eb8b0dc36a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/services/create_concert.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/create_event.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/create_festival.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/v1/events/create.json.jbuilder" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rubocop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/v1/authentication_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/authentication_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/v1/entry_point_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/entry_point_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/v1/events_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/events_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/v1/genres_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/genres_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/v1/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200407112742_create_events.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200407112742_create_events.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200407113510_event_genres.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/artists_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/artists_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/integration/authentication_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/authentication_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/events_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/events_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/integration/genders_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/genders_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/users_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/users_controller_spec.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,41 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="RSpec.V1::EventsController post# ... (5)">
-    <configuration name="V1::EventsController post# ... (1)" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
-      <module name="events_api" />
-      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/integration/events_controller_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="'**/*_spec.rb'" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="V1::EventsController post# create create concert when everything ok must be successefull when artists is duplicated" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="RSpec.V1::GenresController post# ...">
     <configuration name="V1::EventsController post# ... (2)" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
       <module name="events_api" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
@@ -249,6 +200,40 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method v="2" />
     </configuration>
+    <configuration name="V1::GenresController post# ..." type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true" nameIsGenerated="true">
+      <module name="events_api" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/integration/users_controller_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="'**/*_spec.rb'" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="V1::GenresController post# create when the payload is right must return 204" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Development: events_api" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="events_api" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -351,19 +336,19 @@
       <item itemvalue="Rails.Production: events_api" />
       <item itemvalue="Rake.spec: events_api" />
       <item itemvalue="Rake.test: events_api" />
-      <item itemvalue="RSpec.V1::EventsController post# ... (1)" />
       <item itemvalue="RSpec.V1::EventsController post# ..." />
       <item itemvalue="RSpec.V1::EventsController post# ... (2)" />
       <item itemvalue="RSpec.V1::EventsController post# ... (3)" />
       <item itemvalue="RSpec.V1::EventsController post# ... (5)" />
+      <item itemvalue="RSpec.V1::GenresController post# ..." />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="RSpec.V1::GenresController post# ..." />
         <item itemvalue="RSpec.V1::EventsController post# ... (5)" />
         <item itemvalue="RSpec.V1::EventsController post# ... (3)" />
         <item itemvalue="RSpec.V1::EventsController post# ... (2)" />
         <item itemvalue="RSpec.V1::EventsController post# ..." />
-        <item itemvalue="RSpec.V1::EventsController post# ... (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -407,7 +392,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb</url>
-          <line>48</line>
+          <line>51</line>
           <properties a="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -431,7 +416,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/integration/artists_controller_spec.rb</url>
-          <line>161</line>
+          <line>162</line>
           <properties a="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -439,7 +424,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/integration/events_controller_spec.rb</url>
-          <line>58</line>
+          <line>60</line>
           <properties a="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -455,6 +440,7 @@
     <SUITE FILE_PATH="coverage/events_api@V1__GenresController_get_sh_____1_.rcov" NAME="V1::GenresController get#sh... (1) Coverage Results" MODIFIED="1586278358709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="events_api" />
     <SUITE FILE_PATH="coverage/events_api@V1__GenresController_get__i_____2_.rcov" NAME="V1::GenresController get #i... (2) Coverage Results" MODIFIED="1586352457966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="events_api" />
     <SUITE FILE_PATH="coverage/events_api@V1__ArtistsController_delet___.rcov" NAME="V1::ArtistsController delet... Coverage Results" MODIFIED="1586367810052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="events_api" />
+    <SUITE FILE_PATH="coverage/events_api@V1__GenresController_post_____.rcov" NAME="V1::GenresController post# ... Coverage Results" MODIFIED="1586459716126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="events_api" />
     <SUITE FILE_PATH="coverage/events_api@V1__AuthenticationControlle_____2_.rcov" NAME="V1::AuthenticationControlle... (2) Coverage Results" MODIFIED="1586208469759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="events_api" />
     <SUITE FILE_PATH="coverage/events_api@V1__GenresController_get__i___.rcov" NAME="V1::GenresController get# i... Coverage Results" MODIFIED="1586287622708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="events_api" />
     <SUITE FILE_PATH="coverage/events_api@V1__EventsController_post_______3_.rcov" NAME="V1::EventsController post# ... (3) Coverage Results" MODIFIED="1586451947904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="events_api" />

@@ -19,11 +19,13 @@ RSpec.describe V1::EventsController, type: :request do
                                note: 'they wanna caipirinha'
                              })
 
+
     user_body = {
-      name: 'rogerio',
-      email: 'rbispo@rbispo.com.br',
-      password: '123456',
-      password_confirmation: '123456'
+        name: 'rogerio',
+        email: 'rbispo@rbispo.com.br',
+        time_zone: 'UTC-3',
+        password: '123456',
+        password_confirmation: '123456'
     }
 
     user = User.create!(user_body)

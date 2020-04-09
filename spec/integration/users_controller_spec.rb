@@ -3,11 +3,13 @@ require 'rails_helper'
 RSpec.describe V1::GenresController, type: :request do
   before do
     @user_body = {
-      name: 'rbispo',
-      email: 'rbispo@rbispo.com.br',
-      password: '123456',
-      password_confirmation: '123456'
+        name: 'rogerio',
+        email: 'rbispo@rbispo.com.br',
+        time_zone: 'UTC-3',
+        password: '123456',
+        password_confirmation: '123456'
     }
+
     @user = User.create(@user_body)
     payload = {
       user_id: @user.id,
@@ -21,6 +23,7 @@ RSpec.describe V1::GenresController, type: :request do
       it 'must return 204' do
         user_body = {
           name: 'sample',
+          time_zone: 'UTC-3',
           email: 'sample@sample.com.br',
           password: '123456',
           password_confirmation: '123456'
