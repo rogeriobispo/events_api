@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe V1::GenresController, type: :request do
   before do
     @user_body = {
-        name: 'rogerio',
-        email: 'rbispo@rbispo.com.br',
-        time_zone: 'UTC-3',
-        password: '123456',
-        password_confirmation: '123456'
+      name: 'rogerio',
+      email: 'rbispo@rbispo.com.br',
+      time_zone: 'UTC-3',
+      password: '123456',
+      password_confirmation: '123456'
     }
 
     @user = User.create(@user_body)

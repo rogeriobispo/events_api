@@ -19,22 +19,49 @@ RSpec.describe V1::EventsController, type: :request do
                                note: 'they wanna caipirinha'
                              })
 
-
     user_body = {
-        name: 'rogerio',
-        email: 'rbispo@rbispo.com.br',
+      name: 'rogerio',
+      email: 'rbispo@rbispo.com.br',
+      time_zone: 'UTC-3',
+      password: '123456',
+      password_confirmation: '123456'
+    }
+
+    user_body2 = {
+        name: 'rogerio2',
+        email: 'rbispo2@rbispo.com.br',
         time_zone: 'UTC-3',
         password: '123456',
         password_confirmation: '123456'
     }
-
     user = User.create!(user_body)
+
+    user2 = User.create!(user_body2)
 
     payload = {
       user_id: user.id,
       exp: 158_629_588_4
     }
+
+    payload2 = {
+        user_id: user2.id,
+        exp: 158_629_588_4
+    }
+
     @token = JsonWebToken.encode(payload)
+
+    @token2 = JsonWebToken.encode(payload2)
+
+    @event = Event.create({
+                   'kind': 'festival',
+                   'occurred_on': Date.today + 20.days,
+                   'location': 'Morumbi',
+                   'time_zone': 'UTC-3',
+                   'line_up_date': '2020-07-11',
+                   'user_id': user.id,
+                   'artist_ids': [@artist1.id, @artist2.id]
+                  })
+
   end
 
   describe 'post# create' do
@@ -207,5 +234,35 @@ RSpec.describe V1::EventsController, type: :request do
         end
       end
     end
+  end
+
+  describe 'delete# destroy' do
+    context 'when there is event to destroy' do
+      it 'must return 204' do
+        header = { Authorization: "Bearer #{@token}" }
+        delete "/v1/events/#{@event.id}", headers: header
+        expect(response.status).to eq(204)
+      end
+    end
+
+    context 'when there is no  event to destroy' do
+      it 'must return 404' do
+        header = { Authorization: "Bearer #{@token}" }
+        delete '/v1/events/10000', headers: header
+        expect(response.status).to eq(404)
+      end
+    end
+
+    context 'when the event does not belong to current user' do
+      it 'must return 404' do
+        header = { Authorization: "Bearer #{@token2}" }
+        delete "/v1/events/#{@event.id}", headers: header
+        parsed_response = JSON.parse(response.body)
+        line_up_date = parsed_response['errors'].first
+        expect(line_up_date).to include('Event does not belongs to current user')
+        expect(response.status).to eq(422)
+      end
+    end
+
   end
 end

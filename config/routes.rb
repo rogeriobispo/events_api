@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :genres
     resources :users
     resources :artists
-    resources :events, only: [:create, :update, :destroy]
+    resources :events, only: [:create, :destroy]
   end
 end
