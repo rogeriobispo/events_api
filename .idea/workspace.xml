@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="37482082-0ea4-4880-b33a-24eb8b0dc36a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/v1/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/v1/events_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/v1/events_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/integration/artists_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/artists_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/integration/authentication_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/authentication_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/entry_point_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/integration/events_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/events_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/integration/genders_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/genders_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/integration/users_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/integration/users_controller_spec.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -424,7 +419,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/spec/integration/events_controller_spec.rb</url>
-          <line>60</line>
+          <line>61</line>
           <properties a="-1">
             <option name="block-ordinal" value="-1" />
           </properties>

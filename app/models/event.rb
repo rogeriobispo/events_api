@@ -4,6 +4,7 @@ class Event < ApplicationRecord
   has_many :genres
   has_many :genres, through: :artists
   validates :kind, :occurred_on, :location,
-            :line_up_date, :artists, presence: true
+            :line_up_date, :artists,
+            :time_zone, presence: true
   enum kind: { festival: 'festival', concert: 'concert' }
 end

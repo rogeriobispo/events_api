@@ -45,6 +45,7 @@ RSpec.describe V1::EventsController, type: :request do
           'kind': 'concert',
           'occurred_on': Date.today + 20.days,
           'location': 'Morumbi',
+          'time_zone': 'UTC-3',
           'line_up_date': '2020-07-11',
           'artist_ids': [@artist1.id]
         }
@@ -62,6 +63,7 @@ RSpec.describe V1::EventsController, type: :request do
           'kind': 'concert',
           'occurred_on': Date.today + 20.days,
           'location': 'Estadio pacaembu',
+          'time_zone': 'UTC-3',
           'line_up_date': '2020-07-11',
           'artist_ids': [@artist2.id.to_i, @artist2.id.to_i]
         }
@@ -138,6 +140,7 @@ RSpec.describe V1::EventsController, type: :request do
             'kind': 'festival',
             'occurred_on': Date.today + 20.days,
             'location': 'Morumbi',
+            'time_zone': 'UTC-3',
             'line_up_date': '2020-07-11',
             'artist_ids': [@artist1.id, @artist2.id]
           }

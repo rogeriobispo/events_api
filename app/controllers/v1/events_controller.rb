@@ -11,7 +11,7 @@ class V1::EventsController < ApplicationController
   private
 
   def events_params
-    params.permit(:kind, :occurred_on, :location, :line_up_date, artist_ids: [])
+    params.permit(:kind, :time_zone, :occurred_on, :location, :line_up_date, artist_ids: [])
   end
 
   def params_with_user
