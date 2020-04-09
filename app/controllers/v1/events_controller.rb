@@ -1,14 +1,22 @@
 class V1::EventsController < ApplicationController
   def create
-
+    event = CreateEvent.new(params_with_user['kind'])
+    if (@evt = event.save(params_with_user))
+      @evt
+    else
+      render json: { errors: event.errors }, status: :unprocessable_entity
+    end
   end
 
-  def update
+  private
 
+  def events_params
+    params.permit(:kind, :occurred_on, :location, :line_up_date, artist_ids: [])
   end
 
-  def destroy
-
+  def params_with_user
+    param = events_params
+    param[:user_id] = @current_user.id
+    param
   end
 end
-

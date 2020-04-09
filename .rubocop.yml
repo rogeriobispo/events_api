@@ -23,3 +23,7 @@ Style/RescueStandardError:
   Enabled: false
 Style/GuardClause:
   Enabled: false
+Style/ClassMethods:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false

@@ -37,5 +37,3 @@ class V1::GenresController < ApplicationController
     @genre = Genre.find(params[:id])
   end
 end
-
-

@@ -11,4 +11,3 @@ class V1::AuthenticationController < ApplicationController
     end
   end
 end
-

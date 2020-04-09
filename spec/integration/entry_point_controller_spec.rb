@@ -22,7 +22,7 @@ RSpec.describe V1::EntryPointController, type: :request do
       it 'must return invalid tokem' do
         get '/v1/entry_point'
         parsed_response = JSON.parse(response.body)
-        expect(parsed_response['error']).to eq('Not Authorized')
+        expect(parsed_response['errors'].first).to eq('Not Authorized')
         expect(response.status).to eq(401)
       end
     end
@@ -41,7 +41,7 @@ RSpec.describe V1::EntryPointController, type: :request do
         headers = { Authorization: 'Bearer xhabhdklak.bhlahdlkhb' }
         get '/v1/entry_point', headers: headers
         parsed_response = JSON.parse(response.body)
-        expect(parsed_response['error']).to eq('Not Authorized')
+        expect(parsed_response['errors'].first).to eq('Not Authorized')
         expect(response.status).to eq(401)
       end
     end

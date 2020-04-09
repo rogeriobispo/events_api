@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+  rescue_from ActiveRecord::RecordNotUnique, with: :uniq_record
   before_action :authenticate_request
   attr_reader :current_user
 
@@ -7,10 +8,17 @@ class ApplicationController < ActionController::API
 
   def authenticate_request
     @current_user = AuthorizeApiRequest.call(request.headers).result
-    render json: { error: 'Not Authorized' }, status: 401 unless @current_user
+    unless @current_user
+      render json: { errors: ['Not Authorized'] }, status: :unauthorized
+    end
   end
 
-  def record_not_found
-    render json: {}, status: 404
+  def record_not_found(error)
+    render json: { errors: [error] }, status: 404
+  end
+
+  def uniq_record
+    msg = ['Record Alread exists']
+    render json: { errors: msg }, status: :unprocessable_entity
   end
 end

@@ -3,4 +3,3 @@ class V1::EntryPointController < ApplicationController
     render json: { message: "I'm Alive" }
   end
 end
-

@@ -37,17 +37,20 @@ RSpec.describe V1::GenresController, type: :request do
     context 'when the payload is not right' do
       it 'must return 422' do
         user_body = {
-            mail: 'sample@sample.com.br',
-            pwd: '123456',
-            pwd_conf: '123456'
+          mail: 'sample@sample.com.br',
+          pwd: '123456',
+          pwd_conf: '123456'
         }
 
         header = { Authorization: "Bearer #{@token}" }
         post '/v1/users', params: user_body, headers: header
         parsed_response = JSON.parse(response.body)
-        expect(parsed_response['email'].first).to eq('can\'t be blank')
-        expect(parsed_response['password'].first).to eq('can\'t be blank')
-        expect(parsed_response['password_confirmation'].first).to eq('can\'t be blank')
+        email = parsed_response['email'].first
+        password = parsed_response['password'].first
+        confirm_password = parsed_response['password_confirmation'].first
+        expect(email).to eq('can\'t be blank')
+        expect(password).to eq('can\'t be blank')
+        expect(confirm_password).to eq('can\'t be blank')
         expect(response.status).to eq(422)
       end
     end
@@ -58,9 +61,9 @@ RSpec.describe V1::GenresController, type: :request do
       it 'must update user' do
         header = { Authorization: "Bearer #{@token}" }
         payload = {
-            email: 'sample@sample.com.br',
-            password: '123456',
-            password_confirmation: '123456'
+          email: 'sample@sample.com.br',
+          password: '123456',
+          password_confirmation: '123456'
         }
         put "/v1/users/#{@user.id}", params: payload, headers: header
         @user.reload
@@ -73,16 +76,16 @@ RSpec.describe V1::GenresController, type: :request do
       it 'must return not found' do
         header = { Authorization: "Bearer #{@token}" }
         payload = {
-            email: 'sample@sample.com.br',
-            password: '123456',
-            password_confirmation: '123456'
+          email: 'sample@sample.com.br',
+          password: '123456',
+          password_confirmation: '123456'
         }
         put '/v1/users/1000', params: payload, headers: header
         expect(response.status).to eq(404)
       end
     end
-
   end
+
   describe 'get# index' do
     context 'when there is user to return' do
       it 'must return a list of users' do
@@ -97,7 +100,8 @@ RSpec.describe V1::GenresController, type: :request do
   describe 'get# show' do
     context 'when the user exists' do
       it 'must return a user' do
-        get "/v1/users/#{@user.id}", headers: { Authorization: "Bearer #{@token}" }
+        header = { Authorization: "Bearer #{@token}" }
+        get "/v1/users/#{@user.id}", headers: header
         parsed_response = JSON.parse(response.body)
         expect(parsed_response['id']).to eq(@user.id)
         expect(parsed_response['email']).to eq(@user.email)
@@ -112,7 +116,6 @@ RSpec.describe V1::GenresController, type: :request do
       end
     end
   end
-
 
   describe 'delete: destroy' do
     context 'when there is user to destroy' do

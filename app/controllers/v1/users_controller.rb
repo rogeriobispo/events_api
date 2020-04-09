@@ -11,8 +11,8 @@ class V1::UsersController < ApplicationController
   end
 
   def update
-    @User.update(user_params)
-    render json: @User.reload
+    @user.update(user_params)
+    render json: @user.reload
   end
 
   def index
@@ -20,11 +20,11 @@ class V1::UsersController < ApplicationController
   end
 
   def show
-    render json: @User if @User
+    render json: @user if @user
   end
 
   def destroy
-    @User.destroy
+    @user.destroy
   end
 
   private
@@ -34,8 +34,6 @@ class V1::UsersController < ApplicationController
   end
 
   def set_user
-    @User = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 end
-
-
