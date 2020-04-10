@@ -18,11 +18,22 @@ class V1::EventsController < ApplicationController
     end
   end
 
+  def index
+    if(events_params['filter'].present?)
+    @evt = Event.by_user_time_zone(current_user.time_zone)
+               .filter_genre(events_params['filter'])
+    else
+      @evt = Event.by_user_time_zone(current_user.time_zone)
+    end
+    @evt
+  end
+
   private
 
   def events_params
     params.permit(:kind, :time_zone, :occurred_on,
-                  :location, :line_up_date, artist_ids: [])
+                  :location, :line_up_date,
+                  :filter, artist_ids: [])
   end
 
   def params_with_user
