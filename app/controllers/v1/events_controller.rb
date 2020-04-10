@@ -11,21 +11,20 @@ class V1::EventsController < ApplicationController
 
   def destroy
     if @event.user.id == current_user.id
-        @event.destroy
+      @event.destroy
     else
-      msg =['Event does not belongs to current user']
-      render json: {errors: msg }, status: :unprocessable_entity
+      msg = ['Event does not belongs to current user']
+      render json: { errors: msg }, status: :unprocessable_entity
     end
   end
 
   def index
-    if(events_params['filter'].present?)
-    @evt = Event.by_user_time_zone(current_user.time_zone)
-               .filter_genre(events_params['filter'])
-    else
-      @evt = Event.by_user_time_zone(current_user.time_zone)
-    end
-    @evt
+    @evt = if events_params['filter'].present?
+             Event.by_user_time_zone(current_user.time_zone)
+                  .filter_genre(events_params['filter'])
+           else
+             Event.by_user_time_zone(current_user.time_zone)
+           end
   end
 
   private

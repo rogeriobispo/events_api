@@ -28,11 +28,11 @@ RSpec.describe V1::EventsController, type: :request do
     }
 
     user_body2 = {
-        name: 'rogerio2',
-        email: 'rbispo2@rbispo.com.br',
-        time_zone: 'UTC-3',
-        password: '123456',
-        password_confirmation: '123456'
+      name: 'rogerio2',
+      email: 'rbispo2@rbispo.com.br',
+      time_zone: 'UTC-3',
+      password: '123456',
+      password_confirmation: '123456'
     }
     user = User.create!(user_body)
 
@@ -44,8 +44,8 @@ RSpec.describe V1::EventsController, type: :request do
     }
 
     payload2 = {
-        user_id: user2.id,
-        exp: 158_629_588_4
+      user_id: user2.id,
+      exp: 158_629_588_4
     }
 
     @token = JsonWebToken.encode(payload)
@@ -53,15 +53,14 @@ RSpec.describe V1::EventsController, type: :request do
     @token2 = JsonWebToken.encode(payload2)
 
     @event = Event.create({
-                   'kind': 'festival',
-                   'occurred_on': Date.today + 20.days,
-                   'location': 'Morumbi',
-                   'time_zone': 'UTC-3',
-                   'line_up_date': '2020-07-11',
-                   'user_id': user.id,
-                   'artist_ids': [@artist1.id, @artist2.id]
-                  })
-
+                            'kind': 'festival',
+                            'occurred_on': Date.today + 20.days,
+                            'location': 'Morumbi',
+                            'time_zone': 'UTC-3',
+                            'line_up_date': '2020-07-11',
+                            'user_id': user.id,
+                            'artist_ids': [@artist1.id, @artist2.id]
+                          })
   end
 
   describe 'post# create' do
@@ -259,8 +258,34 @@ RSpec.describe V1::EventsController, type: :request do
         delete "/v1/events/#{@event.id}", headers: header
         parsed_response = JSON.parse(response.body)
         line_up_date = parsed_response['errors'].first
-        expect(line_up_date).to include('Event does not belongs to current user')
+        msg = 'Event does not belongs to current user'
+        expect(line_up_date).to include(msg)
         expect(response.status).to eq(422)
+      end
+    end
+  end
+
+  describe 'get# index' do
+    context 'without filter' do
+      it 'must return the events of the time zone of the user ' do
+        header = { Authorization: "Bearer #{@token}" }
+        get '/v1/events.json', headers: header
+        parsed_response = JSON.parse(response.body)
+        genre1 = parsed_response.first['genres'].first['name']
+        genre2 = parsed_response.first['genres'].last['name']
+        expect(genre1).to eq('Pop/Rock')
+        expect(genre2).to eq('Rock')
+      end
+    end
+
+    context 'with filter' do
+      it 'must return the events of the time zone of the user ' do
+        header = { Authorization: "Bearer #{@token}" }
+        get '/v1/events.json?filter=Pop/Rock', headers: header
+        parsed_response = JSON.parse(response.body)
+        genre1 = parsed_response.first['genres'].first['name']
+        expect(genre1).to eq('Pop/Rock')
+        expect(parsed_response.count).to eq(1)
       end
     end
 

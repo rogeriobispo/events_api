@@ -1,5 +1,4 @@
 json.array! @evt do |evt|
-
   json.call(evt, :id, :kind, :occurred_on, :location, :line_up_date)
 
   json.artists evt.artists do |artist|
@@ -14,5 +13,4 @@ json.array! @evt do |evt|
     json.id genre.id
     json.name genre.name
   end
-
 end

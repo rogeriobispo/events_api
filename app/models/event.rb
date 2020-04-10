@@ -9,8 +9,8 @@ class Event < ApplicationRecord
             :time_zone, presence: true
   enum kind: { festival: 'festival', concert: 'concert' }
 
-
-  scope :by_user_time_zone, ->(time_zone) { where(time_zone: time_zone) if time_zone.present? }
-  scope :filter_genre, ->(filter) { select{ |evt| evt.genres.pluck(:name).include?(filter) if filter.present? }}
-
+  scope :by_user_time_zone, ->(time_zone) { where(time_zone: time_zone) }
+  scope :filter_genre, lambda { |filter|
+    select { |evt| evt.genres.pluck(:name).include?(filter) }
+  }
 end
