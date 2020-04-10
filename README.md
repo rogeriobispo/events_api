@@ -39,4 +39,4 @@
 
 ## Database
 
-![img](https://github.com/rogeriobispo/account_api/blob/master/public/dbproject.png)
+![img](https://github.com/rogeriobispo/events_api/blob/master/database.png)
