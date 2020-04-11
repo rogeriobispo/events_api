@@ -1,0 +1,36 @@
+Arguments: 
+  /home/rogerio/.nvm/versions/node/v13.0.1/bin/node /usr/share/yarn/bin/yarn.js add rubocop
+
+PATH: 
+  /home/rogerio/.rvm/gems/ruby-2.6.0/bin:/home/rogerio/.rvm/gems/ruby-2.6.0@global/bin:/home/rogerio/.rvm/rubies/ruby-2.6.0/bin:/home/rogerio/.rvm/bin:/home/rogerio/.sdkman/candidates/kotlin/current/bin:/home/rogerio/.asdf/shims:/home/rogerio/.asdf/bin:/home/rogerio/.nvm/versions/node/v13.0.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/android/Sdk/tools:/opt/android/Sdk/platform-tools
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  13.0.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/rubocop: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66926:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:140564:22)
+      at Request.emit (events.js:210:5)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141536:10)
+      at Request.emit (events.js:210:5)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141458:12)
+      at Object.onceWrapper (events.js:299:28)
+      at IncomingMessage.emit (events.js:215:7)
+      at endReadableNT (_stream_readable.js:1198:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -288,6 +288,5 @@ RSpec.describe V1::EventsController, type: :request do
         expect(parsed_response.count).to eq(1)
       end
     end
-
   end
 end
