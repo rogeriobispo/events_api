@@ -14,21 +14,21 @@ User.create( {
             })
 
 
-            genre = Genre.create(name: 'Rock')
+genre = Genre.create(name: 'Rock')
 
-            genre2 = Genre.create(name: 'Pop/Rock')
+genre2 = Genre.create(name: 'Pop/Rock')
 
-            Artist.create({
-                            name: 'The Beatles',
-                            member_quantity: 4,
-                            genre: genre2,
-                            note: 'they wanna drink wine'
-                          })
+ Artist.create({
+                   name: 'The Beatles',
+                   member_quantity: 4,
+                   genre: genre2,
+                   note: 'they wanna drink wine'
+               })
         
-            Artist.create({
-                                      name: 'AC/DC',
-                                      member_quantity: 5,
-                                      genre: genre,
-                                      note: 'they wanna caipirinha'
-                                    })
+Artist.create({
+                  name: 'AC/DC',
+                  member_quantity: 5,
+                  genre: genre,
+                  note: 'they wanna caipirinha'
+              })
         
