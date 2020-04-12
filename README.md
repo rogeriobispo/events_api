@@ -18,7 +18,7 @@
     * rails db:create
     * rails db:migrate
     * rails db:seed
-    * rails s
+    * rails s -p3001
     
 ## first user
     * email: rbispo@rbispo.com.br
